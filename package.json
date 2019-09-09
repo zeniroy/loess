@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rm -rf dist && mkdir dist && babel src --out-dir dist",
     "prepublish": "npm run build && npm run test",
-    "test": "standard && mocha --compilers js:babel-core/register"
+    "test": "standard && mocha --compilers js:babel-core/register",
+	"prepare": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",
